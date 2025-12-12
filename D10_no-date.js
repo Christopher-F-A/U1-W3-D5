@@ -368,29 +368,73 @@ console.log(removeIndex());
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+function selezionaContainer() {
+  const containerElement = document.getElementById("container");
+  return containerElement;
+}
+console.log(selezionaContainer());
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
+function selectTd() {
+  return document.querySelectorAll("td");
+}
+selectTd();
+
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
-
+function print() {
+  const tds = document.querySelectorAll("td");
+  tds.forEach((td) => console.log(td.textContent));
+}
+print();
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+
+function RedLinks() {
+  const ancore = document.querySelectorAll("a");
+  ancore.forEach((link) => {
+    link.style.backgroundColor = "red";
+  });
+}
+RedLinks();
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+function addLi() {
+  const lista = document.createElement("li");
+  document.getElementById("myList").appendChild(lista);
+}
+addLi();
+addLi();
+addLi();
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+function removeLi() {
+  const lista = document.getElementById("myList");
+  lista.removeChild;
+}
+removeLi(); // da rivedere?
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+function classTest() {
+  const allTr = document.querySelectorAll("tr");
+  allTr.forEach((element) => {
+    element.classList.add("test");
+  });
+}
+classTest();
 
 // [EXTRA] JS Avanzato
 
@@ -404,6 +448,14 @@ console.log(removeIndex());
   **
   ***
 
+*/
+
+/* 
+function halfTree(number) {
+  const tree = "*";
+  for (let i = 0; i < number; i++) {console.log(tree+tree) ;
+}
+halfTree(5);
 */
 
 /* ESERCIZIO 28
