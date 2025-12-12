@@ -13,29 +13,54 @@ REGOLE
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 
+const sum = 10 + 20;
+console.log(sum);
+
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
+
+const random = Math.floor(Math.random() * 21);
+console.log(random);
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
 
+const me = {
+  name: "Christopher",
+  surname: "Filippi Armani",
+  age: 30,
+};
+console.log(me);
+
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
+
+delete me.age;
+console.log(me);
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 
+me.skills = ["HTML", "CSS", "JavaScript"];
+console.log(me.skills);
+
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
 
+me.skills.push("Blender 3D");
+console.log(me.skills);
+
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
+
+me.skills.pop();
+console.log(me.skills);
 
 // Funzioni
 
